@@ -1,0 +1,33 @@
+material Brick
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture bricks.png
+        // Repeat the texture over the surface (4 per face)
+        scale 0.01 0.01
+      }
+    }
+  }
+}
+
+material Granite
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        // Relative to the location of the material script
+        texture ../textures/granite.jpg
+        // Repeat the texture over the surface (4 per face)
+        scale 0.01 0.01
+      }
+    }
+  }
+}
