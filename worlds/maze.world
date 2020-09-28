@@ -48,7 +48,7 @@
         </visual>
         <visual name='one_tag'>
           <cast_shadows>0</cast_shadows>
-          <pose>0.5 -0.3 0.3 -1.57 0 0</pose>
+          <pose>0.4 0.7 0.3 -1.57 0 1.57</pose>
           <geometry>
             <mesh>
               <uri>model://turtlebot3_maze/meshes/one.dae</uri>
@@ -57,7 +57,7 @@
         </visual>
         <visual name='two_tag'>
           <cast_shadows>0</cast_shadows>
-          <pose>2.1 -0.1 0.3 -1.57 0 1.57</pose>
+          <pose>-0.1 2.8 0.1 1.57 0 0</pose>
           <geometry>
             <mesh>
               <uri>model://turtlebot3_maze/meshes/two.dae</uri>
@@ -66,7 +66,7 @@
         </visual>
         <visual name='three_tag'>
           <cast_shadows>0</cast_shadows>
-          <pose>1.7 0.3 0.3 -1.57 0 0</pose>
+          <pose>-0.41 2.3 0.3 -1.57 0 1.57</pose>
           <geometry>
             <mesh>
               <uri>model://turtlebot3_maze/meshes/three.dae</uri>
@@ -75,7 +75,7 @@
         </visual>
         <visual name='four_tag'>
           <cast_shadows>0</cast_shadows>
-          <pose>-0.3 1.9 0.3 -1.57 0 -1.57</pose>
+          <pose>-2.5 -0.4 0.3 -1.57 0 0</pose>
           <geometry>
             <mesh>
               <uri>model://turtlebot3_maze/meshes/four.dae</uri>
