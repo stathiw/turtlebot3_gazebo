@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="stop">
+    <static>true</static>
+    <link name="stop_link">
+      <collision name="stop_collision">
+        <geometry>
+            <box>
+              <size>0.155 0.155 0.01</size>
+            </box>
+        </geometry>
+      </collision>
+      <visual name="stop_visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+            <box>
+              <size>0.155 0.155 0.01</size>
+            </box>
+        </geometry>
+	      <material>
+          <script>
+            <!--uri>file://materials/scripts/floor.material</uri-->
+            <uri>model://turtlebot3_selfdriving/stop/materials/scripts</uri>
+            <uri>model://turtlebot3_selfdriving/stop/materials/textures</uri>
+            <name>stop</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

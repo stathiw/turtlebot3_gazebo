@@ -26,7 +26,7 @@
       <direction>-0.5 0.5 -1</direction>
     </light>
     <model name='ground2'>
-      <pose frame=''>0 0 -0.1 0 -0 0</pose>
+      <pose frame=''>0 0 -0.1 0 0 0</pose>
       <static>1</static>
       <link name='ground'>
         <collision name='ground_coll'>
@@ -67,6 +67,88 @@
         <gravity>1</gravity>
       </link>
     </model>
+    <model name='wall'>
+      <static>true</static>
+      <link name='wall_link'>
+        <pose>-1.98 -2.2 0 0 0 0.04</pose>
+        <visual name='wall'>
+          <geometry>
+            <mesh>
+              <uri>model://turtlebot3_selfdriving/meshes/course-wall.stl</uri>
+            </mesh>
+          </geometry>
+          <material/>
+        </visual>
+         <collision name='wall'>
+          <geometry>
+            <mesh>
+              <uri>model://turtlebot3_selfdriving/meshes/course-wall.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <include>
+      <uri>model://turtlebot3_selfdriving/stop</uri>
+      <pose>-1.8 1.95 0.2 0 1.57 1.57</pose>
+    </include>
+    <model name='buildings'>
+      <static>true</static>
+      <link name='wall_link'>
+        <pose>0 0 0 0 0 0.2</pose>
+        <visual name='building1'>
+          <pose>0.7 0.6 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>0.2 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material/>
+        </visual>
+         <collision name='building1'>
+          <pose>0.7 0.6 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>0.2 0.4 0.4</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='building2'>
+          <pose>-0.3 0.6 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>1.2 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material/>
+        </visual>
+         <collision name='building2'>
+          <pose>-0.3 0.6 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>1.2 0.4 0.4</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='building3'>
+          <pose>-0.7 -0.9 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.2 0.4</size>
+            </box>
+          </geometry>
+          <material/>
+        </visual>
+         <collision name='building3'>
+          <pose>-0.7 -0.9 0 0 0 -0.2</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.2 0.4</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -83,25 +165,25 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates> 
  
-    <light name='user_point_light_2' type='point'>
-      <pose frame=''>-0.948146 0.604519 1 0 -0 0</pose>
+    <!--light name='user_point_light_2' type='point'>
+      <pose frame=''>-0.948146 0.604519 3 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
-        <range>20</range>
+        <range>6</range>
         <constant>0.5</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
-    </light>    
+    </light-->    
     <light name='user_point_light_6' type='point'>
-      <pose frame=''>1.63854 1.69565 1 0 -0 0</pose>
+      <pose frame=''>1.63854 1.69565 3 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
-        <range>20</range>
+        <range>6</range>
         <constant>0.5</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
@@ -110,11 +192,11 @@
       <direction>0 0 -1</direction>
     </light>
     <light name='user_point_light_7' type='point'>
-      <pose frame=''>0.42  -3.31 1 0 -0 0</pose>
+      <pose frame=''>0.42  -2.71 3 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
-        <range>20</range>
+        <range>6</range>
         <constant>0.5</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
@@ -124,11 +206,11 @@
     </light>
 
     <light name='user_point_light_8' type='point'>
-      <pose frame=''>-1.8 1.5 1 0 -0 0</pose>
+      <pose frame=''>-1.8 1.5 3 0 -0 0</pose>
       <diffuse>0.5 0.5 0.5 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
-        <range>20</range>
+        <range>6</range>
         <constant>0.5</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
@@ -136,7 +218,7 @@
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
     </light>
-    <state world_name='default'>
+    <!--state world_name='default'>
       <sim_time>116 345000000</sim_time>
       <real_time>32 693566475</real_time>
       <wall_time>1525097329 747995208</wall_time>
@@ -164,7 +246,7 @@
       <light name='user_point_light_7'>
         <pose frame=''>0.42  -3.31 1 0 -0 0</pose>
       </light>
-    </state>
+    </state-->
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose frame=''>2.7696 -1.93094 6.71513 0 1.1618 2.27182</pose>

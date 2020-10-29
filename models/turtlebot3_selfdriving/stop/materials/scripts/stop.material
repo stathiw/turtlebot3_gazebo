@@ -1,0 +1,14 @@
+material stop
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture stop.png
+      }
+    }
+  }
+}
+
